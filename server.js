@@ -55,6 +55,8 @@ io.on('connection', socket =>{
         console.log(message)
         socket.to(room).broadcast.emit('chat-message', {message: message, name: rooms[room].users[socket.id]}) // send message with name
     })
+
+    
 })
 
 function getUserRooms(socket){ // check room names for a user 

@@ -49,6 +49,8 @@ socket.on('room-created', room =>{
     roomContainer.append(roomElement)
     roomContainer.append(subtitle)
     roomContainer.append(roomLink)
+    location.reload();
+    return false;
 })
 
 // update message-container
