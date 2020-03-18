@@ -9,17 +9,20 @@
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
 </head>
-<body>
-  <h2 style = "text-align: center;">Michael's Chat Server</h2>
-  <div id="room-container" style = "padding-left: 5px;">
+<body style = "background-color: whitesmoke;">
+  <h2 style = "text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bolder;">Michael's Chat Server</h2>
+  <div class="card" id = "room-container" style="width: 18rem;">
     <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
-      <a href="/<%= room %>">Join</a>
+      <div class="card-body">
+        <h5 class="card-title"><%= room %></h5>
+        <p class="card-subtitle mb-2 text-muted">Chat Room</p>
+        <a href="/<%= room %>" class="btn btn-outline-success">Join</a>
+      </div>
     <% }) %>
   </div>
   <form autocomplete = "off" action="/room" method="POST"
   style = "position:relative">
-    <input placeholder="Create a new chat room..." name="room" type="text" required class="form-control column mr-4" 
+    <input placeholder="Create a new chat room..." name="room" type="text" required class="form-control column mr-2" 
     style = "width: 100%; padding-right: 40px;">
     <button class="btn btn-primary" type="submit" id="send-button" style = "
     width: 100px;

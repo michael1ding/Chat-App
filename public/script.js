@@ -37,12 +37,15 @@ socket.on('user-disconnected', name =>{
 
 // On room creation
 socket.on('room-created', room =>{
-    const roomElement = document.createElement('div')
+    const roomElement = document.createElement('h5')
     const roomLink = document.createElement('a')
+    const subtitle = document.createElement('p')
     roomElement.innerText = room
     roomLink.href ="/"+room
-    roomLink.innerText='join'
+    roomLink.innerText='Join Chatroom'
+    subtitle.innerText="Chat Room"
     roomContainer.append(roomElement)
+    roomContainer.append(subtitle)
     roomContainer.append(roomLink)
 })
 
