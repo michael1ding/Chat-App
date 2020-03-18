@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chat App</title>
+  <script>
+      const roomName = "<%= roomName%>" // access server variable and set as js
+  </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
@@ -52,7 +55,7 @@
 </head>
 <body>
   <div id="message-container"></div>
-  <form autocomplete = "off"id="send-container">
+  <form autocomplete = "off" id="send-container">
     <input required placeholder="Enter message to send..." type="text" id="message-input" class="form-control col mr-2">
     <button class="btn btn-primary" type="submit" id="send-button">Send</button>
   </form>
