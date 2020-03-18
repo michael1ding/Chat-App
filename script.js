@@ -1,7 +1,7 @@
 const socket = io('http://localhost:3000') // link socket host
 const messageContainer = document.getElementById('message-container')
-const messageForm = document.getElementById('send-container') // capture message form
-const messageInput = document.getElementById('message-input')
+const messageForm = document.getElementById('send-container')
+const messageInput = document.getElementById('message-input') // capture message form
 
 const name = prompt('Please enter your nickname:')
 appendMessage(name + ' entered the server!')
