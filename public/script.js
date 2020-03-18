@@ -20,6 +20,8 @@ if (messageForm != null){ // only run code on messages landing page
 }
 
 
+
+
 // Send Chats
 socket.on('chat-message', data =>{
     appendMessage(data.name+": "+data.message)
