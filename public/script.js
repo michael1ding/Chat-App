@@ -3,6 +3,7 @@ const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input') // capture message form
 const roomContainer = document.getElementById('room-container')
+const tests = document.getElementById('texts')
 
 
 if (messageForm != null){ // only run code on messages landing page
@@ -58,4 +59,5 @@ function appendMessage(message) {
     const messageElement = document.createElement('div')
     messageElement.innerText = message
     messageContainer.append(messageElement)
+    texts.scrollTop = texts.scrollHeight
 }

@@ -23,7 +23,7 @@
       width: 80%;
       max-width: 1200px;
     }
-    #message-container div {
+    /*#message-container div {
         color: black;
         height: 40px;
         background-color: #c4c4c4;
@@ -36,7 +36,7 @@
         background-color: whitesmoke;
         margin-left: auto;
         
-    }
+    }*/
 
     #send-container {
       position: fixed;
@@ -54,10 +54,21 @@
   </style>
 </head>
 <body>
-  <div id="message-container"></div>
-  <form autocomplete = "off" id="send-container">
-    <input required placeholder="Enter message to send..." type="text" id="message-input" class="form-control col mr-2">
-    <button class="btn btn-primary" type="submit" id="send-button">Send</button>
-  </form>
+  <p class="h2" style="text-align: center; height: 10vh;"><%= roomName %></p>
+  <div id = "texts" style="position: absolute; align-items: center; overflow: scroll; width: 90vw; display:block; top: 10vh; height: 75vh;">
+    <div class="card" style="width: 90%;">
+      <div class="card-body" id="message-container">
+      </div>
+    </div>
+  </div>
+  <div style="position: absolute; align-items: center; width: 90vw; display: block; top: 80vh; height: 15vh;">
+    <form autocomplete = "off" id="send-container" class="my-3 form-inline">
+      <label for="message-input" class="sr-only">URL</label>
+      <input required placeholder="Enter message to send..." type="text" id="message-input" class="form-control col mr-1">
+      <button class="btn btn-primary" type="submit" id="send-button">Send</button>
+    </form>
+  </div>
+  
+  
 </body>
 </html>
